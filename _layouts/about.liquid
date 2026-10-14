@@ -1,0 +1,48 @@
+---
+layout: default
+---
+{% comment %}
+  Local override of al_folio_core's about layout: a two-column hero with the
+  hexagon density field (_includes/hexfield.svg, made by bin/make_hexfield.py)
+  behind the photo, then news and selected publications.
+{% endcomment %}
+<div class="post home">
+  <header class="hero">
+    <div class="hero-map">{% include hexfield.svg %}</div>
+    <div class="hero-text">
+      <h1 class="post-title">{{ site.first_name }} {{ site.last_name }}</h1>
+      <p class="desc">{{ page.subtitle }}</p>
+      <div class="bio">{{ content }}</div>
+      {% if page.social %}
+        <div class="hero-links contact-icons">{% social_links %}</div>
+      {% endif %}
+    </div>
+    {% if page.profile.image %}
+      {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+      <div class="hero-photo">
+        {%
+          include figure.liquid loading="eager" path=profile_image_path class="img-fluid" sizes="(min-width: 768px) 260px, 60vw"
+          alt="Portrait of Luning Li" cache_bust=true
+        %}
+      </div>
+    {% endif %}
+  </header>
+
+  {% if page.announcements and page.announcements.enabled %}
+    <section class="home-section">
+      <h2><a href="{{ '/news/' | relative_url }}">News</a></h2>
+      {% include news.liquid limit=true %}
+    </section>
+  {% endif %}
+
+  {% if page.selected_papers %}
+    <section class="home-section">
+      <h2><a href="{{ '/publications/' | relative_url }}">Selected publications</a></h2>
+      {% include selected_papers.liquid %}
+    </section>
+  {% endif %}
+
+  {% if site.contact_note %}
+    <p class="contact-note">{{ site.contact_note }}</p>
+  {% endif %}
+</div>

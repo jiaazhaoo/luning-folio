@@ -1,0 +1,544 @@
+/*******************************************************************************
+ * Luning Li — site design layer
+ *
+ * Palette: survey-paper white, slate ink, park green, water blue, and a green
+ * density ramp (d1–d4) for the hexagon field on the homepage.
+ * Type: Barlow Semi Condensed (road-sign lineage) for names, headings and
+ * navigation; Source Serif 4 for reading text. Both are self-hosted.
+ ******************************************************************************/
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/barlow-semi-condensed-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/barlow-semi-condensed-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("../fonts/source-serif-4-latin-opsz-normal.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("../fonts/source-serif-4-latin-opsz-italic.woff2") format("woff2-variations");
+}
+
+:root {
+  --lu-paper: #f6f8f7;
+  --lu-ink: #18262e;
+  --lu-ink-soft: #52626a;
+  --lu-green: #2d6a4f;
+  --lu-blue: #2f5d7e;
+  --lu-rule: #d5deda;
+  --lu-d1: #e6eeea;
+  --lu-d2: #d0e1d7;
+  --lu-d3: #b2cfbf;
+  --lu-d4: #8db89f;
+  --lu-sans: "Barlow Semi Condensed", "Arial Narrow", sans-serif;
+  --lu-serif: "Source Serif 4", Georgia, serif;
+
+  --global-bg-color: var(--lu-paper);
+  --global-card-bg-color: var(--lu-paper);
+  --global-text-color: var(--lu-ink);
+  --global-text-color-light: var(--lu-ink-soft);
+  --global-theme-color: var(--lu-green);
+  --global-hover-color: var(--lu-blue);
+  --global-hover-text-color: var(--lu-paper);
+  --global-divider-color: var(--lu-rule);
+  --global-footer-bg-color: var(--lu-paper);
+  --global-footer-text-color: var(--lu-ink-soft);
+  --global-footer-link-color: var(--lu-ink-soft);
+}
+
+html[data-theme="dark"] {
+  --lu-paper: #15212a;
+  --lu-ink: #dce5e1;
+  --lu-ink-soft: #9aaba4;
+  --lu-green: #7cc3a0;
+  --lu-blue: #8db8d6;
+  --lu-rule: #2a3a44;
+  --lu-d1: #1a2a32;
+  --lu-d2: #20383a;
+  --lu-d3: #2a5146;
+  --lu-d4: #3d7a5f;
+
+  --global-bg-color: var(--lu-paper);
+  --global-card-bg-color: var(--lu-paper);
+  --global-text-color: var(--lu-ink);
+  --global-text-color-light: var(--lu-ink-soft);
+  --global-theme-color: var(--lu-green);
+  --global-hover-color: var(--lu-blue);
+  --global-hover-text-color: var(--lu-paper);
+  --global-divider-color: var(--lu-rule);
+  --global-footer-bg-color: var(--lu-paper);
+  --global-footer-text-color: var(--lu-ink-soft);
+  --global-footer-link-color: var(--lu-ink-soft);
+}
+
+/* ---------------------------------------------------------------- base type */
+
+html body {
+  font-family: var(--lu-serif);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  font-optical-sizing: auto;
+  color: var(--lu-ink);
+  background-color: var(--lu-paper);
+  overflow-x: hidden;
+}
+
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6,
+html body .navbar,
+html body .btn,
+html body .badge,
+html body .card-title,
+html body .post-title,
+html body .news th,
+html body footer {
+  font-family: var(--lu-sans);
+}
+
+html body h1,
+html body h2,
+html body h3,
+html body h4 {
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--lu-ink);
+}
+
+html body a {
+  color: var(--lu-green);
+}
+
+html body a:hover {
+  color: var(--lu-blue);
+}
+
+html body article p a,
+html body .bio a,
+html body .news td a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+
+html body a:focus-visible,
+html body button:focus-visible {
+  outline: 2px solid var(--lu-blue);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+html body strong {
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------------- navbar */
+
+html body .navbar {
+  background-color: color-mix(in srgb, var(--lu-paper) 92%, transparent) !important;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--lu-rule);
+  box-shadow: none;
+}
+
+html body .navbar .navbar-brand {
+  font-weight: 600 !important;
+  font-size: 1.2rem;
+  color: var(--lu-ink) !important;
+}
+
+html body .navbar .nav-link {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--lu-ink-soft) !important;
+}
+
+html body .navbar .nav-item.active > .nav-link,
+html body .navbar .nav-link:hover {
+  color: var(--lu-green) !important;
+}
+
+html body .navbar .nav-item.active > .nav-link {
+  font-weight: 600;
+}
+
+html body #search-toggle .nav-link {
+  font-size: 0.85rem;
+}
+
+html body #progress::-webkit-progress-value {
+  background-color: var(--lu-green);
+}
+
+/* -------------------------------------------------------------- page titles */
+
+html body .post-title {
+  font-size: 2.4rem;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+html body .post-description {
+  font-family: var(--lu-sans);
+  color: var(--lu-ink-soft);
+}
+
+/* --------------------------------------------------------------------- hero */
+
+.home .hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 15rem;
+  gap: 2.5rem;
+  align-items: start;
+  padding: 2.5rem 0 0;
+  border: 0;
+  margin-bottom: 0;
+}
+
+.home .hero-map {
+  position: absolute;
+  top: -3.5rem;
+  right: -9rem;
+  width: 40rem;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hexfield {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hexfield .d1 {
+  fill: var(--lu-d1);
+}
+.hexfield .d2 {
+  fill: var(--lu-d2);
+}
+.hexfield .d3 {
+  fill: var(--lu-d3);
+}
+.hexfield .d4 {
+  fill: var(--lu-d4);
+}
+
+.home .hero-text,
+.home .hero-photo {
+  position: relative;
+  z-index: 1;
+}
+
+.home .hero .post-title {
+  font-size: clamp(3rem, 7vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+}
+
+.home .hero .desc {
+  font-family: var(--lu-sans);
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  color: var(--lu-ink-soft);
+  margin-bottom: 1.75rem;
+}
+
+.home .bio {
+  max-width: 34rem;
+}
+
+.home .bio p {
+  margin-bottom: 0.9rem;
+}
+
+.home .bio p:last-child {
+  color: var(--lu-ink-soft);
+  font-size: 0.97rem;
+}
+
+.home .hero-photo {
+  margin-top: 1.25rem;
+}
+
+.home .hero-photo figure {
+  margin: 0;
+}
+
+.home .hero-photo img {
+  border-radius: 3px;
+  box-shadow: 0 0 0 6px var(--lu-paper);
+}
+
+.home .hero-links {
+  margin-top: 1.25rem;
+  font-size: 1.35rem;
+  text-align: left !important;
+}
+
+.home .hero-links a {
+  color: var(--lu-ink-soft);
+  margin-right: 0.9rem;
+}
+
+.home .hero-links a:hover {
+  color: var(--lu-green);
+}
+
+@media (max-width: 767.98px) {
+  .home .hero {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-top: 1.5rem;
+  }
+
+  .home .hero-photo {
+    order: -1;
+    width: 11rem;
+    margin: 0 0 1.5rem;
+  }
+
+  .home .hero-map {
+    top: -2rem;
+    right: -12rem;
+    width: 30rem;
+    opacity: 0.8;
+  }
+}
+
+/* ----------------------------------------------------- homepage sections */
+
+.home .home-section {
+  margin-top: 2.75rem;
+}
+
+.home .home-section > h2 {
+  font-size: 1.45rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--lu-rule);
+}
+
+.home .home-section > h2 a {
+  color: var(--lu-ink);
+  text-decoration: none;
+}
+
+.home .home-section > h2 a:hover {
+  color: var(--lu-green);
+}
+
+html body .news .table-responsive {
+  max-height: none !important;
+}
+
+html body .news table {
+  background: transparent;
+}
+
+html body .news th {
+  width: 7.5rem !important;
+  padding: 0.45rem 1rem 0.45rem 0 !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--lu-ink-soft);
+  white-space: nowrap;
+}
+
+html body .news td {
+  padding: 0.45rem 0 !important;
+  color: var(--lu-ink);
+}
+
+.home .contact-note {
+  margin: 3rem 0 2rem;
+  color: var(--lu-ink-soft);
+  font-size: 0.95rem;
+}
+
+/* ------------------------------------------------------------- publications */
+
+html body .publications ol.bibliography li {
+  margin-bottom: 1.5rem;
+}
+
+html body .publications .abbr {
+  padding-top: 0.15rem;
+}
+
+html body .publications .abbr .badge {
+  background: none !important;
+  color: var(--lu-green);
+  font-family: var(--lu-sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-align: left;
+  padding: 0;
+  white-space: normal;
+}
+
+html body .publications .abbr .badge a {
+  color: var(--lu-green) !important;
+}
+
+html body .publications .title {
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--lu-ink);
+}
+
+html body .publications .author,
+html body .publications .periodical {
+  color: var(--lu-ink-soft);
+  font-size: 0.95rem;
+}
+
+html body .publications .author em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--lu-ink);
+  border-bottom: 0;
+}
+
+html body .publications .links .btn {
+  font-family: var(--lu-sans);
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: none;
+  color: var(--lu-green) !important;
+  background: transparent;
+  border: 1px solid var(--lu-rule);
+  border-radius: 3px;
+  padding: 0.05rem 0.55rem;
+  margin: 0.4rem 0.3rem 0 0;
+  box-shadow: none !important;
+}
+
+html body .publications .links .btn:hover {
+  border-color: var(--lu-green);
+  background: transparent;
+  color: var(--lu-green) !important;
+}
+
+html body .publications h2.bibliography {
+  font-family: var(--lu-sans);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--lu-ink-soft);
+  text-align: left;
+  border-top: 1px solid var(--lu-rule);
+  padding-top: 0.75rem;
+  margin-top: 2rem;
+}
+
+/* --------------------------------------------------------- research page */
+
+html body .projects h2.category {
+  font-family: var(--lu-sans);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--lu-ink-soft);
+  text-align: left;
+  text-transform: capitalize;
+  border-bottom: 1px solid var(--lu-rule);
+  padding-bottom: 0.4rem;
+  margin: 2rem 0 0.5rem;
+}
+
+html body .projects .card {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none !important;
+}
+
+html body .projects .card-body {
+  padding: 0.75rem 0;
+}
+
+html body .projects .card-title {
+  font-size: 1.3rem;
+  color: var(--lu-ink);
+  margin-bottom: 0.3rem;
+}
+
+html body .projects a:hover .card-title {
+  color: var(--lu-green);
+}
+
+html body .projects .card-text {
+  color: var(--lu-ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------- CV page */
+
+html body .cv .card {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+html body .cv .card-title {
+  font-size: 1.4rem;
+  border-bottom: 1px solid var(--lu-rule);
+  padding-bottom: 0.4rem;
+}
+
+html body .cv .badge {
+  background-color: transparent !important;
+  color: var(--lu-green) !important;
+  font-family: var(--lu-sans);
+  font-weight: 600 !important;
+  text-transform: none !important;
+  font-size: 0.9rem;
+}
+
+/* ----------------------------------------------------------------- footer */
+
+html body footer {
+  font-weight: 500;
+  border-top: 1px solid var(--lu-rule);
+  font-size: 0.85rem;
+  color: var(--lu-ink-soft);
+  margin-top: 3rem;
+  padding: 1.25rem 0;
+}
+
+html body footer a {
+  color: var(--lu-ink-soft) !important;
+}
+
+html body footer .container {
+  color: var(--lu-ink-soft);
+}

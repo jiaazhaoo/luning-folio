@@ -1,8 +1,8 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: Research Associate in Urban Analytics · <a href='https://www.ubdc.ac.uk/'>Urban Big Data Centre</a>, <a href='https://www.gla.ac.uk/'>University of Glasgow</a>
+subtitle: Research Associate in Urban Analytics<br>Urban Big Data Centre, University of Glasgow
 
 profile:
   align: right
@@ -27,4 +27,4 @@ I'm a quantitative human geographer at the [Urban Big Data Centre](https://www.u
 
 Current work: **urban park use** across UK cities and the **geographies of gambling**. Previously at the [University of Bristol](https://www.bristol.ac.uk/geography/); PhD in GIScience, [Beijing Normal University](https://www.bnu.edu.cn/) (2023).
 
-**Interests:** human mobility · urban green space & health · gambling harms · tourist behaviour · spatial data science
+Interests: human mobility, urban green space and health, gambling harms, tourist behaviour, spatial data science.
