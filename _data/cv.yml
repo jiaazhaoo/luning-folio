@@ -1,0 +1,130 @@
+cv:
+  name: Luning Li
+  label: Research Associate in Urban Analytics
+  email: Luning.Li@glasgow.ac.uk
+  location: Glasgow, United Kingdom
+  website: https://luningli.github.io
+  summary: Quantitative human geographer and GIScientist studying human dynamics in urban environments with geospatial big data.
+
+  social_networks:
+    - network: LinkedIn
+      username: luning-li-567652295
+
+  sections:
+    Experience:
+      - company: Urban Big Data Centre, University of Glasgow
+        position: Research Associate in Urban Analytics
+        location: Glasgow, UK
+        start_date: 2024-05
+        end_date: present
+        summary: School of Social & Political Sciences.
+        highlights:
+          - ESRC-funded research on urban park and green-space use across UK cities with mobile phone app data.
+          - Development of privacy-preserving mobility data products for 55 major UK cities.
+
+      - company: University of Bristol
+        position: Research Associate in Quantitative Human Geography
+        location: Bristol, UK
+        start_date: 2023-09
+        end_date: 2024-05
+        summary: Quantitative Spatial Science (QuSS) Research Group, School of Geographical Sciences.
+        highlights:
+          - Bristol Hub for Gambling Harms Research project "Experience, Risk, Harm. What social and spatial inequalities exacerbate gambling harms?"
+          - Spatial distribution of gambling opportunities and their impact on gambling behaviour.
+
+    Education:
+      - institution: Beijing Normal University
+        location: Beijing, China
+        area: GIScience
+        degree: PhD
+        studyType: PhD
+        start_date: 2019-09
+        end_date: 2023-06
+        highlights:
+          - State Key Laboratory of Earth Surface Processes and Resource Ecology, Faculty of Geographical Science.
+
+      - institution: Beijing Normal University
+        location: Beijing, China
+        area: Natural Resources
+        degree: MSc
+        studyType: MSc
+        start_date: 2016-09
+        end_date: 2019-06
+        highlights:
+          - Faculty of Geographical Science.
+
+      - institution: East China Normal University
+        location: Shanghai, China
+        area: GIScience (minor in Applied Psychology)
+        degree: BSc
+        studyType: BSc
+        start_date: 2012-09
+        end_date: 2016-06
+        highlights:
+          - School of Geographic Sciences.
+
+    Research Grants:
+      - label: 2023–2024
+        details: "Experience, Risk, Harm. What social and spatial inequalities exacerbate gambling harms? Core team member, Bristol Hub for Gambling Harms Research."
+      - label: 2019–2022
+        details: "Internal and External Linkage Effects and Risk Prevention Strategies of Crowd Aggregation in Open Public Places. Core team member, National Natural Science Foundation of China."
+      - label: "2020"
+        details: "Spatiotemporal Diffusion Patterns and Influencing Factors of the COVID-19 Epidemic in China. Core team member, Beijing Normal University."
+      - label: 2019–2020
+        details: "Response Mechanisms of Wheat Production Systems to Climate Change and Their Adaptive Cultivation Approaches. Team member, National Key R&D Program of China."
+      - label: 2016–2017
+        details: "Crowd Monitoring and Crowd Risk Control in Urban Open Public Places. Team member, National Natural Science Foundation of China."
+
+    Honours & Awards:
+      - label: "2022"
+        details: 'Third Prize, "MAP Cup" Digital & Smart Agriculture Competition, Syngenta Group China (team member).'
+      - label: "2020"
+        details: "Outstanding Presentation Paper in Sub-forum, 16th Spatial Behavior and Planning Symposium of China."
+      - label: "2019"
+        details: "First Prize, Graduate Student Paper Competition, 16th China GIScience Theory and Method Academic Conference."
+      - label: 2017–2022
+        details: "First Prize, Outstanding Graduate Scholarship, Beijing Normal University."
+
+    Presentations:
+      - label: "2026"
+        details: "Urban Mobility Insights from Mobile Phone Data (90-minute workshop). 8th AGILE PhD School, University of Glasgow, UK."
+      - label: "2026"
+        details: "Building Scalable Nature-Use Indicators for Thriving Cities. 34th GIS Research UK Conference (GISRUK), Birmingham, UK."
+      - label: "2025"
+        details: "Speaker, workshop on The Spatial Dimensions of Gambling: Mapping Places, Platforms and Harms. University of Bristol, UK."
+      - label: "2025"
+        details: "Mobile Phone App Data for Understanding Urban Public Park Usage. 33rd GIS Research UK Conference (GISRUK), Bristol, UK."
+      - label: Workshop
+        details: "Mobile Phone App Data for Public Good: Opportunities and Challenges. Digital Footprints Conference, Leeds, UK."
+      - label: "2023"
+        details: "Identifying Tourism Attractiveness Based on Intra-Destination Tourist Behaviour: Evidence from Wi-Fi Data. China Conference on Human Geography, Lanzhou, China."
+      - label: "2020"
+        details: "Contextualizing Human Dynamics: Understanding the Semantics of Movement Trajectories with Wi-Fi Data. 16th Spatial Behavior and Planning Symposium of China (online)."
+      - label: "2019"
+        details: "A Spatial-temporal Analysis Approach of Population Segmentation using Wi-Fi Data. AAG Annual Meeting, Washington, DC, USA."
+      - label: "2019"
+        details: "A Spatiotemporal Approach for Population Segmentation in Open Public Places using Wi-Fi Probe Data. 16th China GIScience Theory and Method Academic Conference, Shanghai, China."
+      - label: "2018"
+        details: "A Modified Inverse Distance Weighting Method for Interpolation in Open Public Places Based on Wi-Fi Probe Data. China Conference on Geography, Xi'an, China."
+
+    Service & Teaching:
+      - label: Reviewer
+        details: Travel Behaviour & Society.
+      - label: Panellist
+        details: "How to Navigate the Life of a PhD Student? Early-career panel, 8th AGILE PhD School, University of Glasgow (2026)."
+      - label: Teaching
+        details: "Teaching Assistant, Academic Writing and Presentation Skills (undergraduate), Beijing Normal University (2018)."
+
+    Skills:
+      - name: Programming
+        keywords: Python, SQL, MATLAB, SPSS
+      - name: GIS & visualisation
+        keywords: ArcGIS, CorelDRAW
+      - name: Methods
+        keywords: Geospatial big data (mobile phone, GPS, Wi-Fi), spatial analysis, machine learning, causal inference
+
+    Languages:
+      - name: Chinese
+        summary: Native
+      - name: English
+        summary: Fluent (IELTS 7.0, TOEFL 99)

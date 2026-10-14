@@ -1,0 +1,7 @@
+# Social and contact links shown on the about page, in this order.
+# See https://github.com/george-gca/jekyll-socials for the supported keys.
+email: Luning.Li@glasgow.ac.uk
+linkedin_username: luning-li-567652295
+# orcid_id: 0000-0000-0000-0000 # TODO: add her ORCID iD (https://orcid.org)
+# scholar_userid: # TODO: add her Google Scholar user ID (the "user=" value in her profile URL)
+cv_pdf: /assets/pdf/Luning_Li_CV.pdf
