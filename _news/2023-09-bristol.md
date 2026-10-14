@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started as a Research Associate in Quantitative Human Geography at the University of Bristol, working with the Bristol Hub for Gambling Harms Research.
+Joined the University of Bristol as a Research Associate.

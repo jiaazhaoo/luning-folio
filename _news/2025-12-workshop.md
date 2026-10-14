@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Spoke at the [Spatial Dimensions of Gambling](https://www.bristol.ac.uk/research/groups/gambling-harms/events/2025/workshop-spatial-dimensions.html) workshop at the University of Bristol.
+Speaker at the Spatial Dimensions of Gambling workshop, Bristol.
