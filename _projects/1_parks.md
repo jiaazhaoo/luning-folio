@@ -3,10 +3,10 @@ layout: page
 title: Urban parks
 description: Who uses city parks, measured with mobile phone app data
 importance: 1
-category: current
+period: 2024–present
 ---
 
-**UBDC, University of Glasgow · 2024– · ESRC**
+**Urban Big Data Centre, University of Glasgow. Since 2024, funded by ESRC.**
 
 - Park visit estimates from mobile phone app data, Glasgow City Region
 - Bias checks and weighting against the population

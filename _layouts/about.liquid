@@ -2,45 +2,46 @@
 layout: default
 ---
 {% comment %}
-  Local override of al_folio_core's about layout: a two-column intro (text and
-  photo), then news and selected publications.
+  Local override of al_folio_core's about layout: intro (photo, name, role,
+  contact links), short bio, research, selected publications, news.
 {% endcomment %}
-<div class="post home">
-  <header class="hero">
-    <div class="hero-text">
-      <h1 class="post-title">{{ site.first_name }} {{ site.last_name }}</h1>
-      <p class="desc">{{ page.subtitle }}</p>
-      <div class="bio">{{ content }}</div>
-      {% if page.social %}
-        <div class="hero-links contact-icons">{% social_links %}</div>
-      {% endif %}
-    </div>
+<div class="home">
+  <section class="intro">
     {% if page.profile.image %}
-      {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-      <div class="hero-photo">
-        {%
-          include figure.liquid loading="eager" path=profile_image_path class="img-fluid" sizes="(min-width: 768px) 260px, 60vw"
-          alt="Portrait of Luning Li" cache_bust=true
-        %}
-      </div>
+      <img
+        class="intro-photo"
+        src="{{ page.profile.image | prepend: 'assets/img/' | relative_url }}"
+        alt="Portrait of {{ site.first_name }} {{ site.last_name }}"
+        width="800"
+        height="1000"
+      >
     {% endif %}
-  </header>
+    <div>
+      <h1>{{ site.first_name }} {{ site.last_name }}</h1>
+      <p class="intro-role">{{ page.subtitle }}</p>
+      <p class="intro-links">
+        <a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a>
+        <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}">LinkedIn</a>
+        <a href="{{ site.data.socials.cv_pdf | relative_url }}">CV (PDF)</a>
+      </p>
+    </div>
+  </section>
 
-  {% if page.announcements and page.announcements.enabled %}
-    <section class="home-section">
-      <h2><a href="{{ '/news/' | relative_url }}">News</a></h2>
-      {% include news.liquid limit=true %}
-    </section>
-  {% endif %}
+  <section class="bio">{{ content }}</section>
 
-  {% if page.selected_papers %}
-    <section class="home-section">
-      <h2><a href="{{ '/publications/' | relative_url }}">Selected publications</a></h2>
-      {% include selected_papers.liquid %}
-    </section>
-  {% endif %}
+  <section class="home-section">
+    <h2><a href="{{ '/research/' | relative_url }}">Research</a></h2>
+    {% include research_list.liquid %}
+  </section>
 
-  {% if site.contact_note %}
-    <p class="contact-note">{{ site.contact_note }}</p>
-  {% endif %}
+  <section class="home-section">
+    <h2><a href="{{ '/publications/' | relative_url }}">Selected publications</a></h2>
+    <div class="publications">{% bibliography --group_by none --query @*[selected=true]* %}</div>
+    <p class="section-more"><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
+  </section>
+
+  <section class="home-section">
+    <h2><a href="{{ '/news/' | relative_url }}">News</a></h2>
+    {% include news_list.liquid limit=5 %}
+  </section>
 </div>

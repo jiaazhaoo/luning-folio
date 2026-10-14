@@ -1,0 +1,14 @@
+{% comment %} Local override of al_folio_core's header: name on the left, four plain text links on the right. {% endcomment %}
+<header class="site-header">
+  <nav class="site-nav container" aria-label="Main">
+    <a class="site-name" href="{{ '/' | relative_url }}">{{ site.first_name }} {{ site.last_name }}</a>
+    <ul class="site-links">
+      {% assign nav_pages = site.pages | where: 'nav', true | sort: 'nav_order' %}
+      {% for p in nav_pages %}
+        <li>
+          <a href="{{ p.url | relative_url }}" {% if page.url == p.url %}aria-current="page"{% endif %}>{{ p.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

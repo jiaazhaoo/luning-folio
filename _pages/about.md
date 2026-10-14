@@ -23,8 +23,6 @@ latest_posts:
   enabled: false
 ---
 
-I'm a quantitative human geographer at the [Urban Big Data Centre](https://www.ubdc.ac.uk/), University of Glasgow. I use **mobile phone, GPS and Wi-Fi data** to study how people move through and use cities.
+I'm a quantitative human geographer. I use mobile phone, GPS and Wi-Fi data to study how people move through and use cities, and what that means for health and wellbeing.
 
-Current work: **urban park use** across UK cities and the **geographies of gambling**. Previously at the [University of Bristol](https://www.bristol.ac.uk/geography/); PhD in GIScience, [Beijing Normal University](https://www.bnu.edu.cn/) (2023).
-
-Interests: human mobility, urban green space and health, gambling harms, tourist behaviour, spatial data science.
+At the [Urban Big Data Centre](https://www.ubdc.ac.uk/) I work on how people use urban parks across the UK. I also study the geographies of gambling, which I began at the [University of Bristol](https://www.bristol.ac.uk/geography/). I hold a PhD in GIScience from [Beijing Normal University](https://www.bnu.edu.cn/).

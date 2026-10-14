@@ -1,0 +1,11 @@
+{% comment %} News as a dated list. Pass limit=N to show only the latest N items. {% endcomment %}
+{% assign news = site.news | reverse %}
+{% if include.limit %}{% assign news = news | slice: 0, include.limit %}{% endif %}
+<ul class="news-list">
+  {% for item in news %}
+    <li>
+      <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %Y' }}</time>
+      <div>{{ item.content | remove: '<p>' | remove: '</p>' }}</div>
+    </li>
+  {% endfor %}
+</ul>

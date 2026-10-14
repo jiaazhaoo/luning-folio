@@ -3,10 +3,10 @@ layout: page
 title: Geographies of gambling
 description: Gambling shops, high streets and online gambling
 importance: 2
-category: current
+period: 2023–present
 ---
 
-**Bristol & Glasgow · 2023– · Bristol Hub for Gambling Harms Research**
+**Universities of Bristol and Glasgow. Since 2023, funded by the Bristol Hub for Gambling Harms Research.**
 
 - First 2014–2023 dataset of gambling shops in Great Britain
 - Shop presence is highly stable: 86% predictable from 2014 counts, even after COVID-19

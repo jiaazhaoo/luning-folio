@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Wi-Fi data & tourism
-description: Crowds and tourist behaviour sensed with Wi-Fi probe data (PhD)
+description: Crowds and tourist behaviour sensed with Wi-Fi probe data
 importance: 4
-category: past
+period: 2016–2023, PhD
 ---
 
-**Beijing Normal University · 2016–2023 · NSFC**
+**Beijing Normal University, 2016–2023. Funded by NSFC.**
 
 - Inferring the meaning of movement trajectories
 - Space–time patterns of tourist flows
